@@ -6,28 +6,34 @@
 </head>
 <div id="line"></div>
 <body>
-  <p>heroku pingbot</p>
-  <p>--------------</p>
-  <p class="title">last ping</p>
-  <p class="add-space">---------</p>
-  <p>{time}</p>
-  <p class="title">apps</p>
-  <p>----</p>
-  {#apps}
-    <p class="add-space">{name}</p>
-  {/apps}
+  <div id="container">
+    <p>heroku pingbot</p>
+    <p>--------------</p>
+    <p class="title">last ping</p>
+    <p class="add-space">---------</p>
+    <p>{time}</p>
+    <p class="title">apps</p>
+    <p>----</p>
+    {#apps}
+      <p class="add-space">{name}</p>
+    {/apps}
+  </div>
 </body>
 <style>
   body {
-    position:fixed;
-    left:2.5%;
-    top:3.5%;
     margin:0 auto;
     font-family:courier;
     font-size:13px;
     line-height:1px;
     background-color:#1d1d1d;
     color:#a0c874;
+  }
+  #container {
+    position:fixed;
+    left:50%;
+    margin-left:-105px;
+    top:50%;
+    margin-top:-92px;
   }
   .title {
     margin-top:25px;
