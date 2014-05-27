@@ -21,7 +21,7 @@
     "serve-favicon": "^2.0.0",
     "underscore": "^1.6.0",
     "request":"*",
-    "qs":"*",
+    "qs":"*"
   },
   "engines": {
     "node": "0.10.x"
