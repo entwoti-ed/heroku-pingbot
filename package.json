@@ -1,0 +1,24 @@
+{
+  "name": "heroku-bot",
+  "version": "0.0.0",
+  "description": "heroku ping cli/gui",
+  "main": "app.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "keywords": [
+    "heroku",
+    "ping",
+    "bot"
+  ],
+  "author": "jared <jaredhalpert90@gmail.com> (http://jaredhalpert.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "dustjs-linkedin": "^2.3.5",
+    "heroku-ping": "^0.1.0",
+    "serve-favicon": "^2.0.0"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }
+}
