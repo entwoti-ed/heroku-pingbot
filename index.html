@@ -7,9 +7,10 @@
 <body>
   <p>heroku-pingbot</p>
   <p>==============</p>
-  <p>last ping {time}</p>
+  <p class="title">last ping</p>
   <p>=========</p>
-  <p>apps</p>
+  <p>{time}</p>
+  <p class="title">apps</p>
   <p>====</p>
   {#apps}
     <p>{name}</p>
@@ -17,9 +18,15 @@
 </body>
 <style>
   body {
+    margin:0 auto;
     font-family:courier;
     font-size:13px;
     line-height:1px;
+    background-color:#1d1d1d;
+    color:#a0c874;
+  }
+  .title {
+    margin-top:25px;
   }
 </style>
 </html>
