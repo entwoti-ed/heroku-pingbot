@@ -18,6 +18,9 @@
       <p class="add-space">{name}</p>
     {/apps}
   </div>
+  <form action="/">
+    <input type="hidden" name="name">
+  </form>
 </body>
 <style>
   @media (min-width: 700px) {
@@ -32,9 +35,6 @@
     line-height:1px;
     background-color:#1d1d1d;
     color:#a0c874;
-    -webkit-text-size-adjust:20%;
-    -moz-text-size-adjust:20%;
-    -ms-text-size-adjust:20%;
   }
   #container {
     position:fixed;
