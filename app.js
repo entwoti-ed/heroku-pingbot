@@ -22,18 +22,19 @@ if(args.length !== 0) {
     }
   }
 }
+
 require('http').createServer(function(req,res) {
   // favicon stuff
   if(req.url === '/favicon.ico') {
-		var _favicon = favicon(path.join(__dirname,'/favicon.ico'))
-		_favicon(req, res, function(err) {
-			if(err) {
-				res.statusCode = 500
-				res.end('err')
-				return
-			}
-			res.end()
-		})
+    var _favicon = favicon(path.join(__dirname,'/favicon.ico'))
+    _favicon(req, res, function(err) {
+      if(err) {
+        res.statusCode = 500
+        res.end('err')
+        return
+      }
+      res.end()
+    })
   } else if(req.url === '/' && req.method === 'POST') {
     var name = ''
     req.on('data',function(d) {
