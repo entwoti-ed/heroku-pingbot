@@ -17,7 +17,7 @@ if(args.length !== 0) {
   while(i++ < args.length) {
     exec('curl -X POST -d name='+args[i]+' http://serene-ridge-4390.herokuapp.com/ --header "Content-Type:application/json"',
       function(err,stdout,stderr) {
-        if(err) throw err;
+        if(err) throw err
         console.log('post:',args[i])
     })
   }
