@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var renderTemplate = require('./lib/utils').renderTemplate
+var renderTemplate = require('./lib/renderTemplate')
   , heroku = require("./lib/heroku-ping")
   , names = require('./names.json')
   , port = process.env.PORT || 3004
@@ -13,16 +13,15 @@ var renderTemplate = require('./lib/utils').renderTemplate
 
 // add new apps
 if(args.length !== 0) {
-  var i=0
+  var i=0;
   while(i++ < args.length) {
-    exec('curl -X POST -d name='+args[i]+' http://serene-ridge-4390.herokuapp.com/ --header "Content-Type:application/json"',
+    exec('curl -X POST -d name='+args[i]+' http://serene-ridge-4390.herokuapp.com/ --header "Content-Type:application/json"'),
     function(err,stdout,stderr) {
       if(err) throw err
-      console.log('post:',args[i])
-    })
+      console.log('post: ',args[i])
+    }
   }
 }
-
 require('http').createServer(function(req,res) {
   // favicon stuff
   if(req.url === '/favicon.ico') {
