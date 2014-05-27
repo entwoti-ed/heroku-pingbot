@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-var heroku = require("./fork/index")
+var renderTemplate = require('./lib/utils').renderTemplate
+  , heroku = require("./lib/heroku-ping")
   , names = require('./names.json')
   , port = process.env.PORT || 3004
-  , renderTemplate = require('./utils').renderTemplate
   , favicon = require('serve-favicon')
   , exec = require('child_process').exec
   , args = process.argv.slice(2)
@@ -16,9 +16,9 @@ if(args.length !== 0) {
   var i=0
   while(i++ < args.length) {
     exec('curl -X POST -d name='+args[i]+' http://serene-ridge-4390.herokuapp.com/ --header "Content-Type:application/json"',
-      function(err,stdout,stderr) {
-        if(err) throw err
-        console.log('post:',args[i])
+    function(err,stdout,stderr) {
+      if(err) throw err
+      console.log('post:',args[i])
     })
   }
 }
