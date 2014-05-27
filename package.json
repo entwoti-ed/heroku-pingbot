@@ -19,7 +19,8 @@
     "dustjs-linkedin": "^2.3.5",
     "heroku-ping": "^0.1.0",
     "serve-favicon": "^2.0.0",
-    "underscore": "^1.6.0"
+    "underscore": "^1.6.0",
+    "request":"*"
   },
   "engines": {
     "node": "0.10.x"
