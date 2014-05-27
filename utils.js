@@ -16,10 +16,9 @@ exports.renderTemplate = function(res) {
     for(i in names) {
       if(Object.keys(names).length-1 >= apps.length) apps.push(names[i])
     }
-    var t = new Date()
-    t.setTime(t.getTime()-t.getTimezoneOffset()*60*1000)
+    var t = new Date().getTime()
     dust.render('ping', {
-      time:t,
+      time:(new Date(t)).toLocaleTimeString(),
       apps:apps
     },function(err,d) {
       if(err) throw err
