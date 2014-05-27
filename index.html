@@ -4,20 +4,24 @@
   <meta name="viewport" content="width=device-width, user-scalable=no">
   <title>ping-bot</title>
 </head>
+<div id="line"></div>
 <body>
-  <p>heroku-pingbot</p>
-  <p>==============</p>
+  <p>heroku pingbot</p>
+  <p>--------------</p>
   <p class="title">last ping</p>
-  <p>=========</p>
+  <p class="add-space">---------</p>
   <p>{time}</p>
   <p class="title">apps</p>
-  <p>====</p>
+  <p>----</p>
   {#apps}
-    <p>{name}</p>
+    <p class="add-space">{name}</p>
   {/apps}
 </body>
 <style>
   body {
+    position:fixed;
+    left:2.5%;
+    top:3.5%;
     margin:0 auto;
     font-family:courier;
     font-size:13px;
@@ -27,6 +31,18 @@
   }
   .title {
     margin-top:25px;
+  }
+  #line {
+    margin:auto;
+    height:4px;
+    background-color:#a0c874;
+    position:fixed;
+    left:0px;
+    width:100%;
+    top:0px;
+  }
+  .add-space {
+    line-height:5px;
   }
 </style>
 </html>
