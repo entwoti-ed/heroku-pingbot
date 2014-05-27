@@ -18,7 +18,7 @@ exports.renderTemplate = function(res) {
     }
     var t = new Date().getTime()
     dust.render('ping', {
-      time:(new Date(t)).toLocaleTimeString(),
+      time:(new Date(t-(1000*60*60*7))).toLocaleTimeString(),
       apps:apps
     },function(err,d) {
       if(err) throw err
